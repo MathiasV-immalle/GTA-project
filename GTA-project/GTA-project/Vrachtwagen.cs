@@ -9,19 +9,19 @@ namespace GTA_project
     class Vrachtwagen : Voertuig
     {
         public Vrachtwagen()
-            : base(ConsoleColor.Green)
         {
+            bestuurder.Naam = "Bart";
         }
 
         public override void Rij()
         {
-            Console2.WriteLine("De vrachtwagen rijdt...", ConsoleColor.Red);
+            Console.WriteLine("De vrachtwagen wordt bestuurd door {0}.", bestuurder.Naam);
         }
 
-        public override void Stuur(int graden)
+        public override void Stuur()
         {
-            Console.WriteLine("De vrachtwagenchauffeur kijkt in zijn dode-hoek-spiegel");
-            base.Stuur(graden);
+            Console.WriteLine("De vrachtwagenchauffeur kijkt in zijn dode-hoek-spiegel...");
+            Console.WriteLine("Stuur!");
         }
 
         public void LaadLeeg()

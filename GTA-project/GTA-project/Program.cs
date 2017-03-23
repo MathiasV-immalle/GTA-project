@@ -10,11 +10,15 @@ namespace GTA_project
     {
         static void Main(string[] args)
         {
-            Voertuig v = new Voertuig(ConsoleColor.Magenta);
+            Voertuig v = new Voertuig();
             Voertuig truck = new Vrachtwagen();
+            Voertuig car = new Auto();
 
+            car.Rij();
+            car.Stuur();
             v.Rij();
             truck.Rij();
+            truck.Stuur();
             Console.ReadLine();
         }
     }

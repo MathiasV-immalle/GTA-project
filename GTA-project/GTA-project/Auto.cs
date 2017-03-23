@@ -8,13 +8,19 @@ namespace GTA_project
 {
     class Auto : Voertuig
     {
-        public Auto() : base(ConsoleColor.DarkYellow)
+        public Auto()
         {
+            bestuurder.Naam = "Bob";
         }
 
         public override void Rij()
         {
-            Console2.WriteLine("De auto rijdt...", ConsoleColor.Red);
+            Console.WriteLine("De auto wordt bestuurd door {0}.", bestuurder.Naam);
+        }
+
+        public override void Stuur()
+        {
+            Console.WriteLine("Stuur!");
         }
     }
 }

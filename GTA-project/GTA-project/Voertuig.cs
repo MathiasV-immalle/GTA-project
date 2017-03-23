@@ -8,21 +8,21 @@ namespace GTA_project
 {
     class Voertuig
     {
-        private ConsoleColor kleur;
+        public Persoon bestuurder = new Persoon();
 
-        public Voertuig(ConsoleColor kleur)
+        public Voertuig()
         {
-            this.kleur = kleur;
+            bestuurder.Naam = "Bert";
         }
 
         public virtual void Rij()
         {
-            Console2.Write("Het {{voertuig}} rijdt...", ConsoleColor.White, kleur);
+            Console.WriteLine("Het voertuig wordt bestuurd door {0}.", bestuurder.Naam);
         }
 
-        public virtual void Stuur(int graden)
+        public virtual void Stuur()
         {
-            Console.WriteLine("");
+            Console.WriteLine("Stuur!");
         }
     }
 }
